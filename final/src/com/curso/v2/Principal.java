@@ -3,8 +3,10 @@ package com.curso.v2;
 public class Principal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		final String cadena = "Hola"; //Inmutable
+		
+		cadena.concat("Hello World");
 	}
 
 }
