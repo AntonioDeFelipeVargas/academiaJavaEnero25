@@ -3,10 +3,19 @@ package com.curso.v1;
 //public,protected,*default(private package),private
 
 class Teacher {
-	private void teach(String student) {}
+	void teach(String student) {}
 }
 
-class Prof extends Teacher{
-	//@Override
-	void teach(String estudiante) {}
+abstract class Prof extends Teacher{
+	@Override
+	public abstract void teach(String s);
+	
+//	@Override
+//	public final void teach(String s){}
+	
+//	@Override
+//	protected void teach(String s){}
+	
+	//private void teach(int i) {}
+	//public void teach(){}
 }  
