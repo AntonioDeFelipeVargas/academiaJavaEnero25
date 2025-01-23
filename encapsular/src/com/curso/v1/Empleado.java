@@ -4,6 +4,7 @@ public class Empleado {
 	
 	private String nombre;
 	private int edad;
+	private boolean vip;
 	
 	public Empleado(String nombre, int edad) {
 		this.nombre = nombre;
@@ -28,6 +29,15 @@ public class Empleado {
 			throw new RuntimeException("Edad no valida");
 		this.edad = edad;
 	}
+
+	public boolean isVip() {
+		return vip;
+	}
+
+	public void setVip(boolean vip) {
+		this.vip = vip;
+	}
+	
 	
 	
 

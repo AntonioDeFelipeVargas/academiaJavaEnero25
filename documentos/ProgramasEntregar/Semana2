@@ -17,6 +17,9 @@ Demuestra:
 MIERCOLES
 3. Ejercicio donde se aplique POLIMORFISMO con Abstracción
 
+JUEVES
+4. Programa implementándole un objeto Inmutable
+
 
 Mi tarea
 static void ejecuta(Operacion ope) {
