@@ -1,14 +1,13 @@
-Semana2
+ACADEMIA JAVA SEMANA 2
+
 MARTES
 1. Biblioteca Musical con ArrayList
 Objetivo: Crear un sistema de gestión de canciones usando Arrays y ArrayList
-Skills practicados:
 - Uso de ArrayList
 - Objetos personalizados
 - Búsqueda y filtrado
 
 2. Sistema de Calificaciones
-Demuestra: 
 - Wrapper classes
 - Autoboxing/Unboxing
 - Static methods y fields
@@ -18,19 +17,11 @@ MIERCOLES
 3. Ejercicio donde se aplique POLIMORFISMO con Abstracción
 
 JUEVES
-4. Programa implementándole un objeto Inmutable
+4. Programa implementándole un Objeto Inmutable
 
+VIERNES
+5. Servicio CRUD Rest
 
-Mi tarea
-static void ejecuta(Operacion ope) {
-		System.out.println(ope);
-		System.out.println(ope.ejecuta());
-		if (ope instanceof Suma) {
-			double d = ((Suma)ope).ejecuta(3.0,5.0);  //<========
-		}
-		System.out.println("ejecuta doubles:");
-		
-	}
 
 
 
