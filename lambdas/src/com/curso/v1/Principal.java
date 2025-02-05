@@ -1,6 +1,7 @@
 package com.curso.v1;
 
 import java.util.*;
+//import java.util.function.Consumer;
 
 public class Principal {
 	
@@ -17,11 +18,11 @@ public class Principal {
 		
 		listaEmpleados = new ArrayList<>(listaEmpleados);
 		
-		//listaEmpleados.sort((e1,e2)->e1.edad-e2.edad);
+		listaEmpleados.sort((e1,e2)->e1.edad-e2.edad);
 		//listaEmpleados.sort((e1,e2)->e1.nombre.compareTo(e2.nombre));
 		//listaEmpleados.sort((e1,e2)-> (int)(e1.sueldo-e2.sueldo));
 		
-		Collections.sort(listaEmpleados,(e1,e2)->e1.nombre.compareTo(e2.nombre));
+		//Collections.sort(listaEmpleados,(e1,e2)->e1.nombre.compareTo(e2.nombre));
 		
 		//listaEmpleados.removeIf(x -> x.edad<21);
 		
@@ -29,8 +30,11 @@ public class Principal {
 //			z.sueldo += 100;
 //			return z;
 //		} );
+		
+		//Consumer<Empleado> cons = e -> System.out.println(e);
 	
-		listaEmpleados.forEach(e -> System.out.println(e));
+		//listaEmpleados.forEach(System.out::println);
+		listaEmpleados.forEach(x -> System.out.println(x));
 	}
 
 }
