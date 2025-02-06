@@ -1,0 +1,38 @@
+En Java existen varios operadores a nivel de bits que nos permiten manipular los valores binarios directamente. Vamos a explorarlos:
+
+1. Operador AND (&):
+Realiza una operación AND bit a bit entre dos números. Por ejemplo:
+```java
+int a = 12;  // 1100 en binario
+int b = 10;  // 1010 en binario
+int c = a & b; // Resultado: 1000 (8 en decimal)
+```
+
+2. Operador OR (|):
+Realiza una operación OR bit a bit. Si cualquiera de los bits es 1, el resultado es 1:
+```java
+int a = 12;  // 1100 en binario
+int b = 10;  // 1010 en binario
+int c = a | b; // Resultado: 1110 (14 en decimal)
+```
+
+3. Operador XOR (^):
+Realiza un OR exclusivo. El resultado es 1 solo si los bits son diferentes:
+```java
+int a = 12;  // 1100 en binario
+int b = 10;  // 1010 en binario
+int c = a ^ b; // Resultado: 0110 (6 en decimal)
+```
+
+4. Operador NOT (~):
+Invierte todos los bits de un número:
+```java
+int a = 12;    // 00001100 en binario
+int b = ~a;    // 11110011 en binario (resultado en complemento a dos)
+```
+~N = -(N + 1)
+Ejemplo:
+int numero = 5;
+int resultadoNOT = ~numero;
+System.out.println(resultadoNOT); //-6
+
