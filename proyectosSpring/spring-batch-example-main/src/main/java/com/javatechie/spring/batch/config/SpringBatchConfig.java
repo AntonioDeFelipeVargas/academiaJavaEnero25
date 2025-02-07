@@ -7,6 +7,7 @@ import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.data.RepositoryItemWriter;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.LineMapper;
@@ -65,8 +66,12 @@ public class SpringBatchConfig {
     }
 
     @Bean
-    public CustomerProcessor processor() {
-        return new CustomerProcessor();
+    public ItemProcessor<Customer,Customer> processor() {    			
+    	return (Customer c) -> {
+			if (c.getCountry().equals("China") && c.getGender().equals("Female")) 
+				return c;
+			return null;
+		};
     }
 
     @Bean
@@ -79,7 +84,8 @@ public class SpringBatchConfig {
 
     @Bean
     public Step step1() {
-        return stepBuilderFactory.get("csv-step").<Customer, Customer>chunk(10)
+        return stepBuilderFactory.get("csv-step")
+        		.<Customer, Customer>chunk(10)
                 .reader(reader())
                 .processor(processor())
                 .writer(writer())
@@ -89,8 +95,11 @@ public class SpringBatchConfig {
 
     @Bean
     public Job runJob() {
-        return jobBuilderFactory.get("importCustomers")
-                .flow(step1()).end().build();
+        return jobBuilderFactory
+        		.get("importCustomers")
+                .flow(step1())
+                .end()
+                .build();
 
     }
 
