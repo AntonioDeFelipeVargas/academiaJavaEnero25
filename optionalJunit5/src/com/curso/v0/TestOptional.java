@@ -16,6 +16,7 @@ class TestOptional {
 	@Test
 	public void whenCreatesEmptyOptional_thenCorrect() {
 		Optional<String> empty = Optional.empty();
+		//empty = empty.of("Hello");
 		assertFalse(empty.isPresent());
 	}
 
@@ -29,9 +30,15 @@ class TestOptional {
 	@Test
 	void givenNull_whenThrowsErrorOnCreate_thenCorrect() {
 		String name = null;
-		assertThrows(NullPointerException.class, () -> {
-			Optional.of(name);
-		});
+		assertThrows(NullPointerException.class, 
+					 () -> Optional.of(name) );
+	}
+	
+	@Test
+	void exceptionCast() {
+		Object o = "Java";
+		assertThrows(ClassCastException.class, 
+					 () -> ((StringBuilder)o).length());
 	}
 
 	@Test
