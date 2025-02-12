@@ -1,0 +1,348 @@
+1. Which of the following statements is true about arrays in Java?	
+R: An array has a fixed size
+
+2. ¿Cuál de los siguientes componentes es parte de una solicitud HTTP?	
+R: URL, headers, cuerpo de la solicitud
+
+3. public class LogicQuestion {
+ public static void main(String[] args) {
+ int count = 0;
+ for (int i = 0; i < 10; i++) {
+ if (i % 2 == 0) {
+ count++;
+ }
+ }
+ System.out.println("Count: " + count);
+ }
+}	
+
+R:Count 5
+
+4. Which method is used to sort elements of a List in natural order in Java? (*)	R:Collections.sort()
+
+5. ¿Qué significa que un cambio en el software sea retro-compatible?	
+R: El cambio garantiza que el software será funcional sin necesidad de modificaciones en el código que depende de él
+
+6. class Base {
+ public Base() {
+ System.out.println("Base constructor");
+ }
+ public Base(String message) {
+ System.out.println("Base constructor with message: " + message);
+ }
+}
+class Derived extends Base {
+ public Derived() {
+ super("Hello");
+ System.out.println("Derived constructor");
+ }
+}
+public class Test {
+ public static void main(String[] args) {
+ Derived derived = new Derived();
+ }
+}	
+
+R: Base constructor with message: Hello
+Derived constructor
+
+7. ¿Cuál es la principal función de Jfrog Artifactory en un entorno de desarrollo de software?	
+R: Gestionar y almacenar artefactos de software, como dependencias y bibliotecas, de manera centralizada
+
+8. ¿Cuál de los siguientes métodos de Mockito se utiliza para verificar que un método de un mock ha sido llamado un número específico de veces? (*)
+R: 	verify() / verify(mock, times(n))
+
+9. abstract class Animal {
+ public abstract void makeSound();
+}
+class Dog extends Animal {
+ @Override
+ public void makeSound() {
+ System.out.println("Bark!");
+ }
+}
+public class Test {
+ public static void main(String[] args) {
+ Animal myDog = new Dog();
+ myDog.makeSound();
+ }
+}	
+R: Bark!
+
+10: ¿Cuál es el propósito principal de la anotación @Test en JUnit?	
+R: Marcar un método como un método de prueba
+
+11. ¿Cuál de las siguientes características es fundamental en una base de datos relacional?	R: Organización de datos en tablas con filas y columnas
+
+12. Which line of code will compile successfully without any additional import statements?
+public class Program{
+ public static void main(String[] args) {
+ // Line A
+ String str = "Hello World!";
+ // Line B
+ ArrayList<String> list = new ArrayList<>();
+ // Line C
+ File file = new File("example.txt");
+ // Line D
+ URL url = new URL("http://example.com");
+ }
+}	
+R: Line A
+
+13: abstract class Shape {
+ public abstract void draw();
+ public void printShape() {
+ System.out.println("This is a shape");
+ }
+}
+class Circle extends Shape {
+ @Override
+ public void draw() {
+ System.out.println("Drawing a circle");
+ }
+}
+public class Test {
+ public static void main(String[] args) {
+ Circle circle = new Circle();
+ circle.draw();
+ circle.printShape();
+ }
+}	
+
+R:Drawing a circle 
+This is a shape
+
+14: Cuál es el propósito principal del archivo pom.xml en un proyecto Maven?	
+R: Definir las dependencias, plugins y configuraciones del proyecto
+
+15: Which section in the pom.xml file specifies the external libraries and dependencies required by the project?	
+R: <dependencies>
+
+16. What will be the output of the following code snippet? 
+public class ScopeTest {
+ private int value = 10;
+ 
+ public void printValue() {
+ int value = 20;
+ System.out.println(this.value);
+ }
+ 
+ public static void main(String[] args) {
+ ScopeTest test = new ScopeTest();
+ test.printValue();
+ }
+}	
+R: 10
+
+17: What is the primary purpose of a Data Transfer Object (DTO) in software design?	
+R: To transfer data between different layers or tiers of an application
+
+18: Which declaration correctly initializes a boolean variable in Java?
+a. boolean f = "true";
+b. boolean f = () => f;
+c. boolean f = (1 + 0);
+d. boolean d = (a < b);
+e. boolean b = 0 < 1;
+f. boolean a = (10 > 5 && 2 < 3);	
+R: e y f
+
+19: Which of the following statements about the 'throw' keyword is true?	
+R: It is used to manually throw an exception
+
+20. Which of the following code snippets will throw a ClassCastException
+a. class A {}
+class B extends A {}
+public class Test {
+ public static void main(String[] args) {
+ B obj = new B();
+ A a = (A) obj;
+ }
+}
+b. class A {}
+class B extends A {}
+public class Test {
+ public static void main(String[] args) {
+ A obj = new B();
+ A a = (A) obj;
+ }
+}
+c. class A {}
+class B extends A {}
+public class Test {
+ public static void main(String[] args) {
+ A obj = new B();
+ B b = (B) obj;
+ }
+}
+d. class A {}
+class B extends A {}
+public class Test {
+ public static void main(String[] args) {
+ A obj = new A();
+ B b = (B) obj;
+ }
+}	
+R: d.
+
+21. ¿Cuál de las siguientes afirmaciones es correcta sobre la aserción assert() en jUnit?
+R: Se utiliza para verificar que una condición es verdadera
+
+22. ¿Cual es la funcion principal del JDK (Java Development Kit)?	
+R: Ofrecer herramientas necesarias para compilar, depurar y ejecutar aplicaciones Java.
+
+23. Which of the following statements accurately describe the differences between Comparator and Comparable interfaces in Java?	R: All of the above.
+
+24. What is the purpose of the "throws" keyword in a method declaration in Java?	
+R: To indicate the exceptions that the method can throw to the caller.
+
+25. ¿Cuales de los siguientes comandos de Git se utilizan para gestionar ramas en un repositorio? (Seleccione todas las que correspondan).	
+R: git checkout, git branch, git merge
+
+26. ¿Cual de los siguientes patrones de diseño es adecuado para crear una estructura de objetos en forma de arbol para representar jerarquias parte-todo, permitiendo a los clientes tratar objetos individuales y compuestos de manera uniforme?	
+R: Patrón Compuesto (Composite Pattern).
+
+27. Which file is used to configure user specific settings in Maven?	
+R: settings.xml
+
+28. What will be the output of the following code snippets?
+import java.util.ArrayList;
+import java.util.List;
+public class GenericTest {
+ public static <T> void addIfAbsent(List<T> list, T element) {
+ if (!list.contains(element)) {
+ list.add(element);
+ }
+ }
+ public static void main(String[] args) {
+ List<String> items = new ArrayList<>();
+ items.add("apple");
+ items.add("banana");
+ addIfAbsent(items, "cherry");
+ addIfAbsent(items, "apple");
+ System.out.println(items);
+ }
+}	
+R: [apple, banana, cherry]
+
+29. What will be the output of the following code snippet?
+public class StringConcatenationTest {
+ public static void main(String[] args) {
+ String str1 = "Hello";
+ String str2 = "World";
+ String str3 = str1 + " " + str2; 
+ String str4 = str1.concat(" ").concat(str2); 
+ String str5 = new StringBuilder().append(str1).append(" ").append(str2).toString(); 
+ System.out.println(str1.equals(str2) + " "); 
+ System.out.println(str3.equals(str4) + " "); 
+ System.out.println(str3 == str5 + " "); 
+ System.out.println(str4 == str5); 
+ }
+}	
+R: false true false false
+
+30. Which of the following code snippets will result in a compilation error when implementing the vehicle interface?
+
+interface Vehicle{
+void start();
+void stop(); //public abstract
+}	
+
+R: public class Bike implements Vehicle {
+ public void start() { ... } 
+ void stop() { ... } 
+}
+
+31. What will be the output of the following code snippet?
+public class StaticNonStaticBlockTest {
+ static {
+ System.out.println("Static block");
+ }
+ {
+ System.out.println("Instance block");
+ }
+ public StaticNonStaticBlockTest() {
+ System.out.println("Constructor");
+ }
+ public static void staticMethod() {
+ System.out.println("Static method");
+ }
+ public static void main(String[] args) {
+ StaticNonStaticBlockTest test = new StaticNonStaticBlockTest();
+ new StaticNonStaticBlockTest();
+ }
+}	
+R: 
+Static block
+Instance block
+Constructor
+Instance block
+Constructor
+
+32. En el contexto de bases de datos relacionales, si una transacción cumple con la propiedad de Aislamiento (Isolation) del principio ACID, esto significa que:	
+R: Las transacciones se ejecutan como si fueran la única operación en el sistema, sin interferencia de otras transacciones concurrentes.
+
+33. Which of the following statements accurately describe the relationships that can exist between classes in Java?
+
+a. Both inheritance and composition can be used together to model complex relationships.
+b. Inheritance represents an "is-a" relationship where one class derives from another class.
+c. Composition represents a "has-a" relationship where one class contains an instance of another class.
+d. Composition should be preferred over inheritance to promote code reuse and flexibility.
+e. Usage (or association) represents a "uses-a" relationship where one class uses methods or instances of another class.
+f. Inheritance should be preferred over composition to promote code reuse and flexibility
+R: a, b, c ,d, e
+
+34. Todo el acceso a los datos debe estar encapsulado en una biblioteca para facilitar la reutilización y control de acceso.	
+R: Verdadero
+
+35. En el contexto de Maven, ¿Cuál es la función principal del archivo settings.xml?	
+Configurar la información del repositorio local y remoto, así como las credenciales y perfiles de usuario.
+
+36. Where do you configure the plugins used for various build tasks in Maven's pom.xml?	
+R: <build>
+
+37. What will be the result of the following code execution?
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListTest {
+public static void main(String[] args) {
+List<Integer> list = new ArrayList<>();
+list.add(1);
+list.add(2);
+list.add(3);
+list.remove(1); 
+System.out.println(list);
+}
+}	
+R: [1, 3]
+
+38. Which of the following methods can be used to remove all elements from an ArrayList?	
+R: clear()
+
+39. ¿Cuál es la principal desventaja del antipatrón "contenedor mágico" en el desarrollo de software?	
+R: Oculta demasiada lógica de negocio en un contenedor genérico, lo que hace que el código sea difícil de entender y depurar.
+
+40. ¿Cuál de las siguientes afirmaciones describe mejor un Step en el contexto de Spring Batch?	
+R: Un objeto de dominio que encapsula una fase independiente y secuencial de un trabajo por lotes.
+
+41. Which method override is valid given the following classes?
+class Parent {
+void display() {
+System.out.println("Parent");
+}
+}
+class Child extends Parent {
+// Override here
+}	
+
+R: public void display() { System.out.println("Child"); 
+}
+
+42. ¿Cuál es la rama principal de Github en la que se integran las nuevas funcionalidades antes de lanzarlas a producción?	
+R: develop
+
+43. ¿Cuál es el comando en Bash para cambiar el directorio actual a uno especificado?	
+R: cd
+
+44. Which of the following is NOT part of the Agile Software development lifecycle?	
+R: Documenting
