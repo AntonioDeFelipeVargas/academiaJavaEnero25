@@ -1,5 +1,7 @@
 package com.ejemplo.springboot_mongodb_academy.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,11 @@ public class PersonServiceImpl implements PersonService {
 	public String save(Person person) {
 		personRepository.save(person);
         return person.getPersonId();
+	}
+	
+	@Override
+	public List<Person> findAll() {
+        return personRepository.findAll();
 	}
 
 }
