@@ -9,5 +9,7 @@ public interface PersonService {
 	String save(Person person);
 
 	List<Person> findAll();
+
+	void delete(String id);
 	
 }
