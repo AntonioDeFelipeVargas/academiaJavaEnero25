@@ -40,6 +40,11 @@ public class PersonServiceImpl implements PersonService {
 	}
 	
 	@Override
+    public List<Person> getPersonStartWith(String name) {
+        return personRepository.findByFirstNameStartsWith(name);
+    }
+	
+	@Override
     public List<Document> getOldestPersonByCity() {
         UnwindOperation unwindOperation
                 = Aggregation.unwind("addresses");

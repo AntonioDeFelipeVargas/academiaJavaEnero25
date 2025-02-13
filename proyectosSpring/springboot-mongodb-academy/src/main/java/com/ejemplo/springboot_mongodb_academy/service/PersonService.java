@@ -15,5 +15,7 @@ public interface PersonService {
 	void delete(String id);
 
 	List<Document> getOldestPersonByCity();
+
+	List<Person> getPersonStartWith(String name);
 	
 }

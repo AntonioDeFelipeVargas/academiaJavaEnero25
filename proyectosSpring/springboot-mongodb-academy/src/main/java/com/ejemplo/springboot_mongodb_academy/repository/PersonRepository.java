@@ -8,4 +8,6 @@ import com.ejemplo.springboot_mongodb_academy.collection.Person;
 
 public interface PersonRepository extends MongoRepository<Person, String>{
 	
+    List<Person> findByFirstNameStartsWith(String name);
+
 }

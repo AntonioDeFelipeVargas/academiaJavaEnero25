@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ejemplo.springboot_mongodb_academy.collection.Person;
@@ -22,12 +23,17 @@ public class PersonController {
 	@Autowired
     private PersonService personService;
 	
+	@GetMapping
+    public List<Person> getPersonStartWith(@RequestParam("name") String name) {
+        return personService.getPersonStartWith(name);
+    }
+	
 	@PostMapping
 	public String save(@RequestBody Person person) {
         return personService.save(person);
     }
 	
-	@GetMapping
+	@GetMapping("/getPersonas")
 	public List<Person> getPersons() {
         return personService.findAll();
     }
