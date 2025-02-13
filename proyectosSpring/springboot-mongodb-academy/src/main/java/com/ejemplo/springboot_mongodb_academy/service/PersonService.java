@@ -2,6 +2,8 @@ package com.ejemplo.springboot_mongodb_academy.service;
 
 import java.util.List;
 
+import org.bson.Document;
+
 import com.ejemplo.springboot_mongodb_academy.collection.Person;
 
 public interface PersonService {
@@ -11,5 +13,7 @@ public interface PersonService {
 	List<Person> findAll();
 
 	void delete(String id);
+
+	List<Document> getOldestPersonByCity();
 	
 }

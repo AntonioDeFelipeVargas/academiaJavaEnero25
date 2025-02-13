@@ -2,6 +2,7 @@ package com.ejemplo.springboot_mongodb_academy.controller;
 
 import java.util.List;
 
+import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,6 +35,11 @@ public class PersonController {
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable String id) {
         personService.delete(id);
+    }
+	
+	@GetMapping("/oldestPerson")
+    public List<Document> getOldestPerson() {
+        return personService.getOldestPersonByCity();
     }
 
 

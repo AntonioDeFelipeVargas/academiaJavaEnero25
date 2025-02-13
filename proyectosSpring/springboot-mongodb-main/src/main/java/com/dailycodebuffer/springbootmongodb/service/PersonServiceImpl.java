@@ -26,6 +26,7 @@ public class PersonServiceImpl implements PersonService{
 
     @Autowired
     private MongoTemplate mongoTemplate;
+    
     @Override
     public String save(Person person) {
         return personRepository.save(person).getPersonId();
