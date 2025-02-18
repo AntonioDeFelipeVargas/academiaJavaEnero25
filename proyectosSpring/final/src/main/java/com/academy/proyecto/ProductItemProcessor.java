@@ -18,7 +18,8 @@ public class ProductItemProcessor implements ItemProcessor<ProductBean, ProductB
         ProductBean transformedProduct = new ProductBean(
         		product.getProductId(), 
         		product.getProductName(), 
-        		product.getProductDesc(), price);
+        		product.getProductDesc(), 
+        		price);
         
         LOGGER.info("Converting ( {} ) into ( {} )", product, transformedProduct);
         return transformedProduct;
