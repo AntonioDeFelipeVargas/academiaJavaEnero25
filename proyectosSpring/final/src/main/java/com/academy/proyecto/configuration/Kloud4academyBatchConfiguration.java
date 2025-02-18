@@ -35,8 +35,9 @@ public class Kloud4academyBatchConfiguration {
     @Bean
     public FlatFileItemReader reader() {
         return new FlatFileItemReaderBuilder<>()
-            .name("coffeeItemReader")
+            .name("productItemReader")
             .resource(new ClassPathResource(fileInput))
+            .linesToSkip(1)
             .delimited()
             .names(new String[] { "productId", "productName", "productDesc", "price" })
             .fieldSetMapper(new BeanWrapperFieldSetMapper() {{
@@ -56,8 +57,8 @@ public class Kloud4academyBatchConfiguration {
     }
     
     @Bean
-    public Job importUserJob(JobRepository jobRepository, JobExecutionListener listener, Step step1) {
-        return new JobBuilder("importUserJob", jobRepository)
+    public Job importProductJob(JobRepository jobRepository, JobExecutionListener listener, Step step1) {
+        return new JobBuilder("importProductJob", jobRepository)
             .incrementer(new RunIdIncrementer())
             .listener(jobCompletionListener())
             .flow(step1)

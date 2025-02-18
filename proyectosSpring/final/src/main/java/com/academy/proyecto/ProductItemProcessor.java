@@ -13,7 +13,7 @@ public class ProductItemProcessor implements ItemProcessor<ProductBean, ProductB
 
     @Override
     public ProductBean process(final ProductBean product) throws Exception {
-        String price = "$" + product.getPrice();
+        String price = "$$$" + product.getPrice();
         
         ProductBean transformedProduct = new ProductBean(
         		product.getProductId(), 
